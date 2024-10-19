@@ -1,12 +1,7 @@
-const preprocess = require('svelte-preprocess');
+import {vitePreprocess} from '@sveltejs/vite-plugin-svelte';
 
-const config = {
-	extensions: ['.svelte'],
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	]
+export default {
+	// Consult https://svelte.dev/docs#compile-time-svelte-preprocess
+	// for more information about preprocessors
+	preprocess: vitePreprocess()
 };
-
-module.exports = config;

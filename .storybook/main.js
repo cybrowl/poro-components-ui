@@ -1,30 +1,21 @@
-/** @type { import('@storybook/svelte-vite').StorybookConfig } */
 const config = {
-	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|ts|svelte)'],
+	stories: ['../src/stories/*.stories.@(js|ts|svelte)'],
+
 	addons: [
-		'@storybook/addon-svelte-csf',
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
-		'@chromatic-com/storybook',
-		'@storybook/addon-interactions'
+		'@storybook/addon-interactions',
+		'@storybook/addon-svelte-csf'
 	],
+
 	framework: {
-		name: '@storybook/sveltekit',
+		name: '@storybook/svelte-vite',
 		options: {}
 	},
-	core: {
-		builder: '@storybook/builder-vite', 
-	},
-	  async viteFinal(config) {
-		// Merge custom configuration into the default config
-		const { mergeConfig } = await import('vite');
-	 
-		return mergeConfig(config, {
-		  // Add dependencies to pre-optimization
-		  optimizeDeps: {
-			include: ['storybook-dark-mode'],
-		  },
-		});
+
+	docs: {
+		autodocs: false
 	}
 };
+
 export default config;
