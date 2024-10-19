@@ -23,6 +23,7 @@
 		"@storybook/svelte-vite": "^8.3.6",
 		"@storybook/sveltekit": "^8.3.6",
 		"@storybook/test": "^8.3.6",
+		"@storybook/theming": "^8.3.6",
 		"@sveltejs/package": "^2.0.2",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"autoprefixer": "^10.4.14",
@@ -34,7 +35,6 @@
 		"prettier-plugin-svelte": "^3.2.7",
 		"storybook": "^8.3.6",
 		"storybook-dark-mode": "^4.0.2",
-		"svelte-preprocess": "^6.0.3",
 		"tailwindcss": "^3.3.1",
 		"vite": "^5.4.9"
 	}
