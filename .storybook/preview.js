@@ -19,6 +19,19 @@ const preview = {
 				color: /(background|color)$/i,
 				date: /Date$/i
 			}
+		},
+		backgrounds: {
+			default: 'poro_dark',
+			values: [
+				{
+					name: 'poro_dark',
+					value: '#0A0A0B'
+				},
+				{
+					name: 'poro_grey',
+					value: '#1E1E1E'
+				}
+			]
 		}
 	}
 };
