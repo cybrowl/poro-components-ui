@@ -8,7 +8,7 @@ const preview = {
 			dark: {
 				...themes.dark,
 				brandImage:
-					'https://raw.githubusercontent.com/cybrowl/dsign-components/main/src/lib/assets/dsign_logo.png'
+					'https://raw.githubusercontent.com/cybrowl/poro-components/main/src/lib/assets/poro_logo.png'
 			},
 			light: {...themes.normal, appBg: 'white'},
 			stylePreview: true,
