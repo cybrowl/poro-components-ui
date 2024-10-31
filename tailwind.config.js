@@ -4,7 +4,7 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Roboto', 'sans-serif']
+				sans: ['Nano Sans', 'sans-serif']
 			},
 			colors: {
 				'black-a': '#0A0A0B',
