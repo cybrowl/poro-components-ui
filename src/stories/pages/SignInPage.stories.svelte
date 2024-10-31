@@ -2,7 +2,7 @@
 	import SignInPage from '../../lib/pages/SignInPage.svelte';
 
 	export const meta = {
-		title: 'Page / SignInPage',
+		title: 'Page / Sign In',
 		component: SignInPage
 	};
 </script>
