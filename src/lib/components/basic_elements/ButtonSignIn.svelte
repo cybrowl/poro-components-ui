@@ -22,6 +22,7 @@
 
 <style lang="postcss">
 	.sign_in_button {
-		@apply font-sans flex items-center w-80 gap-6 p-2 rounded-md text-xl text-white;
+		@apply font-sans flex items-center w-80 gap-6 p-4 rounded-md text-xl text-white border-solid border border-white;
+		border-color: rgba(255, 255, 255, 0.25);
 	}
 </style>

@@ -1,7 +1,7 @@
 <script>
 	import {createEventDispatcher} from 'svelte';
 	import Icon from '../components/basic_elements/Icon.svelte';
-	import Button from '../components/basic_elements/Button.svelte';
+	import ButtonSignIn from '../components/basic_elements/ButtonSignIn.svelte';
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -23,7 +23,15 @@
 					/>
 				</div>
 				<div class="write_main_layout">
-					<Button />
+					<span class="sign_in_buttons">
+						<ButtonSignIn />
+						<ButtonSignIn
+							label="Continue with DFINITY"
+							logo_name="dfinity_logo"
+							logo_size="2.5rem"
+							logo_view_size={{width: 48, height: 24}}
+						/>
+					</span>
 				</div>
 			</div>
 		</body>
@@ -44,5 +52,8 @@
 	}
 	.write_main_layout {
 		@apply col-start-7 col-end-13 row-start-1 row-end-auto flex justify-center items-center bg-black-b w-full h-full;
+	}
+	.sign_in_buttons {
+		@apply flex flex-col gap-6;
 	}
 </style>
