@@ -2,7 +2,7 @@
 	import Button from '../lib/components/basic_elements/Button.svelte';
 
 	export const meta = {
-		title: 'Button',
+		title: 'Basic Elems / Button',
 		component: Button
 	};
 </script>

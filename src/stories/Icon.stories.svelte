@@ -2,7 +2,7 @@
 	import Icon from '../lib/components/basic_elements/Icon.svelte';
 
 	export const meta = {
-		title: 'Icons',
+		title: 'Basic Elems / Icons',
 		component: Icon
 	};
 </script>
