@@ -168,3 +168,45 @@
 		}
 	}}
 />
+
+<Story
+	name="history_gold"
+	args={{
+		name: 'history_gold',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
+
+<Story
+	name="gpt_white"
+	args={{
+		name: 'gpt_white',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
+
+<Story
+	name="gpt_gold"
+	args={{
+		name: 'gpt_gold',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
