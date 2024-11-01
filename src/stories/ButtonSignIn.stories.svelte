@@ -22,6 +22,6 @@
 		logo_name: 'dfinity_logo',
 		label: 'Continue with DFINITY',
 		logo_view_size: {width: 48, height: 24},
-		logo_size: '3rem'
+		logo_size: '2rem'
 	}}
 />

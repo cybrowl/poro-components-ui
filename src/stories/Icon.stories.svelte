@@ -56,3 +56,87 @@
 		}
 	}}
 />
+
+<Story
+	name="new_session_none"
+	args={{
+		name: 'new_session_none',
+		class: 'cursor_pointer fill_none',
+		size: '3rem',
+		scale: 1,
+		viewSize: {
+			width: 32,
+			height: 32
+		}
+	}}
+/>
+
+<Story
+	name="new_session_gold"
+	args={{
+		name: 'new_session_gold',
+		class: 'cursor_pointer fill_none',
+		size: '3rem',
+		scale: 1,
+		viewSize: {
+			width: 32,
+			height: 32
+		}
+	}}
+/>
+
+<Story
+	name="wallet_none"
+	args={{
+		name: 'wallet_none',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
+
+<Story
+	name="wallet_gold"
+	args={{
+		name: 'wallet_gold',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
+
+<Story
+	name="settings_none"
+	args={{
+		name: 'settings_none',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
+
+<Story
+	name="settings_gold"
+	args={{
+		name: 'settings_gold',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
