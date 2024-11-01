@@ -1,9 +1,9 @@
 <script context="module">
-	import ButtonSignIn from '../lib/components/basic_elements/ButtonSignIn.svelte';
+	import Button from '../lib/components/sign_in/Button.svelte';
 
 	export const meta = {
-		title: 'Basic Elems / ButtonSignIn',
-		component: ButtonSignIn
+		title: 'Sign In / Button',
+		component: Button
 	};
 </script>
 
@@ -12,7 +12,7 @@
 </script>
 
 <Template let:args>
-	<ButtonSignIn {...args} />
+	<Button {...args} />
 </Template>
 
 <Story name="Google" args={{label: 'Continue with Google'}} />

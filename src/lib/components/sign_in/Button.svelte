@@ -1,6 +1,6 @@
 <!-- src/components/Button.svelte -->
 <script>
-	import Icon from './Icon.svelte';
+	import Icon from '../basic_elements/Icon.svelte';
 
 	export let label = 'Continue with Google';
 	export let logo_name = 'google_logo';
