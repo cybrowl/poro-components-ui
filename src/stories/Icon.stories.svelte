@@ -210,3 +210,17 @@
 		}
 	}}
 />
+
+<Story
+	name="submit"
+	args={{
+		name: 'submit',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 56,
+			height: 56
+		}
+	}}
+/>
