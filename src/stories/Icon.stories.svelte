@@ -140,3 +140,31 @@
 		}
 	}}
 />
+
+<Story
+	name="history_none"
+	args={{
+		name: 'history_none',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
+
+<Story
+	name="history_gold"
+	args={{
+		name: 'history_gold',
+		class: 'cursor_pointer',
+		size: '4rem',
+		scale: 1,
+		viewSize: {
+			width: 44,
+			height: 44
+		}
+	}}
+/>
