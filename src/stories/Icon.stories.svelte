@@ -58,9 +58,9 @@
 />
 
 <Story
-	name="new_session_none"
+	name="new_session_white"
 	args={{
-		name: 'new_session_none',
+		name: 'new_session_white',
 		class: 'cursor_pointer fill_none',
 		size: '3rem',
 		scale: 1,
@@ -86,9 +86,9 @@
 />
 
 <Story
-	name="wallet_none"
+	name="wallet_white"
 	args={{
-		name: 'wallet_none',
+		name: 'wallet_white',
 		class: 'cursor_pointer',
 		size: '4rem',
 		scale: 1,
@@ -114,9 +114,9 @@
 />
 
 <Story
-	name="settings_none"
+	name="settings_white"
 	args={{
-		name: 'settings_none',
+		name: 'settings_white',
 		class: 'cursor_pointer',
 		size: '4rem',
 		scale: 1,
@@ -142,9 +142,9 @@
 />
 
 <Story
-	name="history_none"
+	name="history_white"
 	args={{
-		name: 'history_none',
+		name: 'history_white',
 		class: 'cursor_pointer',
 		size: '4rem',
 		scale: 1,
