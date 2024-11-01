@@ -6,37 +6,31 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<main>
-	<html lang="en" class="dark">
-		<body>
-			<div class="grid_layout">
-				<div class="read_main_layout">
-					<Icon
-						name="poro_logo"
-						class="cursor_default"
-						size="12rem"
-						scale="1"
-						viewSize={{
-							width: 221,
-							height: 59
-						}}
-					/>
-				</div>
-				<div class="write_main_layout">
-					<span class="sign_in_buttons">
-						<Button />
-						<Button
-							label="Continue with DFINITY"
-							logo_name="dfinity_logo"
-							logo_size="2.5rem"
-							logo_view_size={{width: 48, height: 24}}
-						/>
-					</span>
-				</div>
-			</div>
-		</body>
-	</html>
-</main>
+<div class="grid_layout">
+	<div class="read_main_layout">
+		<Icon
+			name="poro_logo"
+			class="cursor_default"
+			size="12rem"
+			scale="1"
+			viewSize={{
+				width: 221,
+				height: 59
+			}}
+		/>
+	</div>
+	<div class="write_main_layout">
+		<span class="sign_in_buttons">
+			<Button />
+			<Button
+				label="Continue with DFINITY"
+				logo_name="dfinity_logo"
+				logo_size="2.5rem"
+				logo_view_size={{width: 48, height: 24}}
+			/>
+		</span>
+	</div>
+</div>
 
 <!-- Mobile Not Supported -->
 <div class="grid lg:hidden h-screen place-items-center text-white text-4xl">
