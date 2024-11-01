@@ -3,16 +3,37 @@
 </script>
 
 <div class="main">
-	<Icon name="gpt_white" viewSize={{width: 44, height: 44}} size="4rem" />
+	<Icon
+		name="gpt"
+		class="fill_gold"
+		viewSize={{width: 44, height: 44}}
+		size="4rem"
+	/>
 	<Icon
 		name="line"
+		class="fill_gold"
 		clickable={false}
 		size="2rem"
 		viewSize={{width: 1, height: 24}}
 	/>
-	<Icon name="wallet_white" viewSize={{width: 44, height: 44}} size="4rem" />
-	<Icon name="history_white" viewSize={{width: 44, height: 44}} size="4rem" />
-	<Icon name="settings_white" viewSize={{width: 44, height: 44}} size="4rem" />
+	<Icon
+		name="wallet"
+		class="fill_gold"
+		viewSize={{width: 44, height: 44}}
+		size="4rem"
+	/>
+	<Icon
+		name="history"
+		class="fill_gold"
+		viewSize={{width: 44, height: 44}}
+		size="4rem"
+	/>
+	<Icon
+		name="settings"
+		class="fill_gold"
+		viewSize={{width: 44, height: 44}}
+		size="4rem"
+	/>
 	<Icon
 		name="new_session_white"
 		class="fill_none ml-6"

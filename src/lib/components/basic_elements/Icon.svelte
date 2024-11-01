@@ -69,7 +69,14 @@
 	.fill_none {
 		@apply fill-none;
 	}
-	.merigold {
+	.fill_white {
+		@apply fill-white;
+	}
+	.fill_gold {
 		@apply fill-merigold;
+	}
+	svg:focus {
+		outline: none;
+		box-shadow: none;
 	}
 </style>

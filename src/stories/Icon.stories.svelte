@@ -88,8 +88,8 @@
 <Story
 	name="wallet_white"
 	args={{
-		name: 'wallet_white',
-		class: 'cursor_pointer',
+		name: 'wallet',
+		class: 'cursor_pointer fill_white',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
@@ -102,8 +102,8 @@
 <Story
 	name="wallet_gold"
 	args={{
-		name: 'wallet_gold',
-		class: 'cursor_pointer',
+		name: 'wallet',
+		class: 'cursor_pointer fill_gold',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
@@ -116,8 +116,8 @@
 <Story
 	name="settings_white"
 	args={{
-		name: 'settings_white',
-		class: 'cursor_pointer',
+		name: 'settings',
+		class: 'cursor_pointer fill_white',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
@@ -130,8 +130,8 @@
 <Story
 	name="settings_gold"
 	args={{
-		name: 'settings_gold',
-		class: 'cursor_pointer',
+		name: 'settings',
+		class: 'cursor_pointer fill_gold',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
@@ -144,8 +144,8 @@
 <Story
 	name="history_white"
 	args={{
-		name: 'history_white',
-		class: 'cursor_pointer',
+		name: 'history',
+		class: 'cursor_pointer fill_white',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
@@ -158,22 +158,8 @@
 <Story
 	name="history_gold"
 	args={{
-		name: 'history_gold',
-		class: 'cursor_pointer',
-		size: '4rem',
-		scale: 1,
-		viewSize: {
-			width: 44,
-			height: 44
-		}
-	}}
-/>
-
-<Story
-	name="history_gold"
-	args={{
-		name: 'history_gold',
-		class: 'cursor_pointer',
+		name: 'history',
+		class: 'cursor_pointer fill_gold',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
@@ -186,8 +172,8 @@
 <Story
 	name="gpt_white"
 	args={{
-		name: 'gpt_white',
-		class: 'cursor_pointer',
+		name: 'gpt',
+		class: 'cursor_pointer fill_white',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
@@ -200,8 +186,8 @@
 <Story
 	name="gpt_gold"
 	args={{
-		name: 'gpt_gold',
-		class: 'cursor_pointer',
+		name: 'gpt',
+		class: 'cursor_pointer fill_gold',
 		size: '4rem',
 		scale: 1,
 		viewSize: {
