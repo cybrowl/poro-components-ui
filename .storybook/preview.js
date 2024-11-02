@@ -1,5 +1,5 @@
-import '../src/tailwind.css';
 import {themes} from '@storybook/theming';
+import '../src/tailwind.css';
 
 /** @type { import('@storybook/svelte').Preview } */
 const preview = {

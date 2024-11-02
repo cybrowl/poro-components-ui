@@ -16,6 +16,9 @@
 		"svelte": "4.2.19"
 	},
 	"devDependencies": {
+		"@milkdown/kit": "^7.5.5",
+		"@milkdown/plugin-tooltip": "^7.5.3",
+		"@milkdown/theme-nord": "^7.5.0",
 		"@storybook/addon-essentials": "^8.3.6",
 		"@storybook/addon-interactions": "^8.3.6",
 		"@storybook/addon-links": "^8.3.6",
@@ -30,6 +33,7 @@
 		"lodash": "^4.17.21",
 		"luxon": "^3.3.0",
 		"postcss": "^8.4.23",
+		"postcss-import": "^16.1.0",
 		"postcss-load-config": "^6.0.1",
 		"prettier": "^3.3.3",
 		"prettier-plugin-svelte": "^3.2.7",
