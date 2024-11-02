@@ -13,7 +13,7 @@
 		name="gpt"
 		class={selected_icon === 'gpt' ? 'fill_gold' : 'fill_white'}
 		viewSize={{width: 44, height: 44}}
-		size="4rem"
+		size="3rem"
 		on:click={() => select_icon('gpt')}
 	/>
 	<Icon
@@ -27,28 +27,28 @@
 		name="wallet"
 		class={selected_icon === 'wallet' ? 'fill_gold' : 'fill_white'}
 		viewSize={{width: 44, height: 44}}
-		size="4rem"
+		size="3rem"
 		on:click={() => select_icon('wallet')}
 	/>
 	<Icon
 		name="history"
 		class={selected_icon === 'history' ? 'fill_gold' : 'fill_white'}
 		viewSize={{width: 44, height: 44}}
-		size="4rem"
+		size="3rem"
 		on:click={() => select_icon('history')}
 	/>
 	<Icon
 		name="settings"
 		class={selected_icon === 'settings' ? 'fill_gold' : 'fill_white'}
 		viewSize={{width: 44, height: 44}}
-		size="4rem"
+		size="3rem"
 		on:click={() => select_icon('settings')}
 	/>
 	<Icon
 		name="new_session_white"
 		class="fill_none ml-6"
 		viewSize={{width: 32, height: 32}}
-		size="2.6rem"
+		size="2.5rem"
 	/>
 </div>
 

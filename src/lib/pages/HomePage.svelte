@@ -49,7 +49,7 @@
 		@apply fixed top-8 right-0 w-1/4 h-16 bg-black-b z-10;
 	}
 	.editor {
-		@apply mt-16 w-full h-full overflow-auto p-4;
+		@apply mt-40 w-full h-full overflow-auto p-4;
 	}
 	.sign_in_buttons {
 		@apply flex flex-col gap-6;
