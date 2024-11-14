@@ -1,6 +1,6 @@
 {
 	"name": "poro-components-ui",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "components for poro",
 	"scripts": {
 		"storybook": "storybook dev -p 6006",
@@ -16,9 +16,6 @@
 		".": {
 			"svelte": "./index.js"
 		}
-	},
-	"peerDependencies": {
-		"svelte": "4.2.19"
 	},
 	"devDependencies": {
 		"@milkdown/kit": "^7.5.5",
