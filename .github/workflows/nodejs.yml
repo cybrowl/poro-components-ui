@@ -24,9 +24,9 @@ jobs:
         run: |
           npm ci
 
-      # Build the project
-      - name: Build
-        run: npm run build
+      # Package the project
+      - name: Package
+        run: npm run package
 
       # Publish to npm registry
       - name: Publish
