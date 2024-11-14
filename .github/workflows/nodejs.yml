@@ -1,20 +1,36 @@
 name: Node CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main # or whatever branch you want to trigger this workflow
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Setup Node.js environment with npm registry URL
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm i
-      - run: npm run package
-      - run: cp package.json ./dist
-      - run: cd dist && npm publish
+
+      # Clean installation
+      - name: Clean and Install
+        run: |
+          npm ci
+
+      # Build the project
+      - name: Build
+        run: npm run build
+
+      # Publish to npm registry
+      - name: Publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm publish
