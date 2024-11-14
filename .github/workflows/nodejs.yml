@@ -3,7 +3,7 @@ name: Node CI
 on:
   push:
     branches:
-      - main
+      - main # or whatever branch you want to trigger this workflow
 
 jobs:
   build:
@@ -31,12 +31,10 @@ jobs:
       # Copy package.json to dist folder
       - run: cp package.json ./dist
 
-      # Go into `Dist` dir
-      - run: cd dist
-
       # Publish to npm registry
       - name: Publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          cd dist
           npm publish
