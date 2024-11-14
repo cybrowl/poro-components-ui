@@ -31,8 +31,8 @@ jobs:
       # Copy package.json to dist folder
       - run: cp package.json ./dist
 
-      # Publish from the dist folder to npm registry
-      - run: cd dist && npm publish
+      # Go into `Dist` dir
+      - run: cd dist
 
       # Publish to npm registry
       - name: Publish
