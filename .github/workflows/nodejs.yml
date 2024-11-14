@@ -3,7 +3,7 @@ name: Node CI
 on:
   push:
     branches:
-      - main # or whatever branch you want to trigger this workflow
+      - main
 
 jobs:
   build:
@@ -27,6 +27,12 @@ jobs:
       # Package the project
       - name: Package
         run: npm run package
+
+      # Copy package.json to dist folder
+      - run: cp package.json ./dist
+
+      # Publish from the dist folder to npm registry
+      - run: cd dist && npm publish
 
       # Publish to npm registry
       - name: Publish
