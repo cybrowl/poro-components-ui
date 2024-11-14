@@ -1,6 +1,6 @@
 {
 	"name": "poro-components",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "components for poro",
 	"scripts": {
 		"storybook": "storybook dev -p 6006",
@@ -12,6 +12,11 @@
 	"author": "",
 	"type": "module",
 	"license": "ISC",
+	"exports": {
+		".": {
+			"svelte": "./index.js"
+		}
+	},
 	"peerDependencies": {
 		"svelte": "4.2.19"
 	},
