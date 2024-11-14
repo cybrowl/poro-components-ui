@@ -1,2 +1,2 @@
-# poro-components
+# poro-components-ui
 Components for Poro
