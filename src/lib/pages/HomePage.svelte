@@ -73,9 +73,9 @@
 		@apply fixed top-8 right-0 w-1/4 h-16 bg-black-b z-10;
 	}
 	.editor_root {
-		@apply mt-40 w-full h-full  bg-black-b p-4 text-white;
+		@apply mt-40 p-4;
 	}
 	.markdown {
-		@apply overflow-auto w-full h-full fixed mb-10;
+		@apply overflow-auto w-full h-full fixed mb-10 z-10;
 	}
 </style>
