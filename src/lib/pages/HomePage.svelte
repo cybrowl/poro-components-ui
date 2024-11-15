@@ -36,13 +36,15 @@
 			<MainToolBar />
 		</div>
 		<div class="editor_root">
-			<MarkdownEditor
-				bind:value
-				mode="tabs"
-				{carta}
-				disableToolbar={true}
-				placeholder="#"
-			/>
+			<div class="markdown">
+				<MarkdownEditor
+					bind:value
+					mode="tabs"
+					{carta}
+					disableToolbar={true}
+					placeholder="#"
+				/>
+			</div>
 		</div>
 	</div>
 </div>
@@ -71,6 +73,9 @@
 		@apply fixed top-8 right-0 w-1/4 h-16 bg-black-b z-10;
 	}
 	.editor_root {
-		@apply mt-40 w-full h-full overflow-auto bg-black-b p-4 text-white;
+		@apply mt-40 w-full h-full  bg-black-b p-4 text-white;
+	}
+	.markdown {
+		@apply overflow-auto w-full h-full fixed mb-10;
 	}
 </style>

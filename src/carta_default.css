@@ -82,7 +82,7 @@
 /* Markdown input and renderer */
 .carta-theme__default .carta-input,
 .carta-theme__default .carta-renderer {
-	height: 600px;
+	height: 100%;
 	overflow-y: scroll;
 }
 
