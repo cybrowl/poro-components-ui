@@ -1,5 +1,6 @@
 import {themes} from '@storybook/theming';
 import '../src/tailwind.css';
+import '../src/carta_default.css';
 
 /** @type { import('@storybook/svelte').Preview } */
 const preview = {
