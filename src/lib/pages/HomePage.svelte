@@ -39,7 +39,7 @@
 			<div class="markdown">
 				<MarkdownEditor
 					bind:value
-					mode="auto"
+					mode="split"
 					{carta}
 					disableToolbar={true}
 					placeholder="#"
