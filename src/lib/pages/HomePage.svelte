@@ -67,13 +67,13 @@
 		@apply col-start-1 col-end-7 row-start-1 row-end-auto flex justify-center items-center bg-black-a w-full h-full;
 	}
 	.write_main_layout {
-		@apply col-start-7 col-end-13 row-start-1 row-end-auto flex flex-col bg-black-b w-full h-full;
+		@apply col-start-7 col-end-13 row-start-1 row-end-auto justify-between flex flex-col bg-black-b w-full h-full;
 	}
 	.toolbar {
-		@apply fixed top-8 right-0 w-1/4 h-16 bg-black-b z-10;
+		@apply w-full h-16 bg-black-b z-10 flex items-center justify-end p-10;
 	}
 	.editor_root {
-		@apply mt-40 p-4;
+		@apply flex-grow p-4;
 	}
 	.markdown {
 		@apply overflow-auto w-full h-full fixed mb-10 z-10;
