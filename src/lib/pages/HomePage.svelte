@@ -16,8 +16,8 @@
 	export let has_chats = false;
 </script>
 
-<div class="grid_layout">
-	<div class="read_main_layout">
+<div class="main-grid">
+	<div class="read-panel">
 		{#if has_chats === true}
 			<Icon
 				name="poro_logo"
@@ -31,11 +31,11 @@
 			/>
 		{/if}
 	</div>
-	<div class="write_main_layout">
+	<div class="write-panel">
 		<div class="toolbar">
 			<MainToolBar />
 		</div>
-		<div class="editor_root">
+		<div class="editor-root">
 			<div class="markdown">
 				<MarkdownEditor
 					bind:value
@@ -60,22 +60,44 @@
 		font-size: 1.1rem;
 	}
 
-	.grid_layout {
-		@apply hidden lg:grid grid-cols-12 gap-y-2 place-items-center h-screen fixed inset-0;
+	.main-grid {
+		@apply hidden lg:grid
+            grid-cols-12
+            gap-y-2
+            place-items-center
+            h-screen
+            fixed inset-0;
 	}
-	.read_main_layout {
-		@apply col-start-1 col-end-7 row-start-1 row-end-auto flex justify-center items-center bg-black-a w-full h-full;
+
+	.read-panel {
+		@apply col-start-1 col-end-7
+            row-start-1 row-end-auto
+            flex justify-center items-center
+            bg-background-primary
+            w-full h-full;
 	}
-	.write_main_layout {
-		@apply col-start-7 col-end-13 row-start-1 row-end-auto justify-between flex flex-col bg-black-b w-full h-full;
+
+	.write-panel {
+		@apply col-start-7 col-end-13
+            row-start-1 row-end-auto
+            justify-between flex flex-col
+            bg-background-secondary
+            w-full h-full;
 	}
+
 	.toolbar {
-		@apply w-full h-16 bg-black-b z-10 flex items-center justify-end p-10;
+		@apply w-full h-16
+            z-10 flex items-center
+            justify-end p-10;
 	}
-	.editor_root {
+
+	.editor-root {
 		@apply flex-grow p-4;
 	}
+
 	.markdown {
-		@apply overflow-auto w-full h-full fixed mb-10 z-10;
+		@apply overflow-auto
+            w-full h-full
+            fixed mb-10 z-10;
 	}
 </style>

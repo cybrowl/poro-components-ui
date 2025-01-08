@@ -6,8 +6,8 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<div class="grid_layout">
-	<div class="read_main_layout">
+<div class="main-grid">
+	<div class="read-panel">
 		<Icon
 			name="poro_logo"
 			class="cursor_default"
@@ -19,8 +19,8 @@
 			}}
 		/>
 	</div>
-	<div class="write_main_layout">
-		<span class="sign_in_buttons">
+	<div class="write-panel">
+		<span class="sign-in-buttons">
 			<Button />
 			<Button
 				label="Continue with DFINITY"
@@ -38,16 +38,33 @@
 </div>
 
 <style lang="postcss">
-	.grid_layout {
-		@apply hidden lg:grid grid-cols-12 gap-y-2 place-items-center h-screen fixed inset-0;
+	.main-grid {
+		@apply hidden lg:grid
+			grid-cols-12
+			gap-y-2
+			place-items-center
+			h-screen
+			fixed inset-0;
 	}
-	.read_main_layout {
-		@apply col-start-1 col-end-7 row-start-1 row-end-auto flex justify-center items-center bg-black-a w-full h-full;
+
+	.read-panel {
+		@apply col-start-1 col-end-7
+			row-start-1 row-end-auto
+			flex justify-center items-center
+			bg-background-primary
+			w-full h-full;
 	}
-	.write_main_layout {
-		@apply col-start-7 col-end-13 row-start-1 row-end-auto flex justify-center items-center bg-black-b w-full h-full;
+
+	.write-panel {
+		@apply col-start-7 col-end-13
+			row-start-1 row-end-auto
+			flex justify-center items-center
+			bg-background-secondary
+			w-full h-full;
 	}
-	.sign_in_buttons {
-		@apply flex flex-col gap-6;
+
+	.sign-in-buttons {
+		@apply flex flex-col
+			gap-6;
 	}
 </style>

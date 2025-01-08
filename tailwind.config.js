@@ -1,4 +1,4 @@
-const config = {
+export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	safelist: [/^carta-/],
 	theme: {
@@ -7,12 +7,10 @@ const config = {
 				sans: ['Nano Sans', 'sans-serif']
 			},
 			colors: {
-				'black-a': '#0A0A0B',
-				'black-b': '#1E1E1E',
+				'background-primary': '#0C0C0D',
+				'background-secondary': '#111113',
+				'gray-a': '#313135',
 				merigold: '#DAA520'
-			},
-			boxShadow: {
-				gray: '0 10px 15px -3px rgba(58, 58, 80, 0.5), 0 4px 6px -2px rgba(58, 58, 80, 0.3)'
 			},
 			screens: {
 				'3xl': '2222px'
@@ -22,5 +20,3 @@ const config = {
 
 	plugins: []
 };
-
-module.exports = config;
