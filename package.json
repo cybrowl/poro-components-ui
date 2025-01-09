@@ -1,6 +1,6 @@
 {
 	"name": "poro-components-ui",
-	"version": "0.2.6",
+	"version": "0.2.7",
 	"description": "components for poro",
 	"scripts": {
 		"storybook": "storybook dev -p 6006",

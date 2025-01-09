@@ -3,3 +3,5 @@
 
 .dfx
 *storybook.log
+
+.package-lock.json
