@@ -21,12 +21,18 @@
 	</div>
 	<div class="write-panel">
 		<span class="sign-in-buttons">
-			<Button />
 			<Button
 				label="Continue with DFINITY"
+				variant="highlighted"
 				logo_name="dfinity_logo"
-				logo_size="2.5rem"
+				logo_size="2rem"
 				logo_view_size={{width: 48, height: 24}}
+			/>
+			<Button
+				label="Continue with Google"
+				logo_name="google_logo"
+				logo_size="1.75rem"
+				logo_view_size={{width: 32, height: 32}}
 			/>
 		</span>
 	</div>
