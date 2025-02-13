@@ -17,9 +17,7 @@ const config = {
 		options: {}
 	},
 
-	docs: {
-		autodocs: false
-	}
+	docs: {}
 };
 
 export default config;

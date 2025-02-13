@@ -2,3 +2,4 @@
 /.out/**
 /public/build/**
 /node_modules/**
+./svelte-kit/**
