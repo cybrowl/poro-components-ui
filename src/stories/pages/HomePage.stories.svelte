@@ -1,19 +1,12 @@
 <script context="module">
+	import {defineMeta} from '@storybook/addon-svelte-csf';
 	import HomePage from '../../lib/pages/HomePage.svelte';
 
-	export const meta = {
+	const {Story} = defineMeta({
 		title: 'Page / Home',
 		component: HomePage
-	};
+	});
 </script>
-
-<script>
-	import {Template, Story} from '@storybook/addon-svelte-csf';
-</script>
-
-<Template let:args>
-	<HomePage {...args} />
-</Template>
 
 <Story
 	name="default"
