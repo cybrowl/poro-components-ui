@@ -1,40 +1,38 @@
 <script>
 	import * as icons from './icons';
-	import {createEventDispatcher} from 'svelte';
-	const dispatch = createEventDispatcher();
 
-	export let name;
-	export let clickable = true;
-	export let focusable = false;
-	export let viewSize = {
-		width: 24,
-		height: 24
-	};
+	const {
+		name,
+		clickable = true,
+		focusable = false,
+		viewSize = {width: 24, height: 24},
+		size = '2rem',
+		scale = 1,
+		class: className = ''
+	} = $props();
 
-	export let size = '2rem'; // size is now used for both width and height
-	export let scale = 1; // scale factor, adjust this to scale the icon
-	export let viewbox = {
+	const viewbox = {
 		width: viewSize.width / scale,
 		height: viewSize.height / scale
 	};
 
 	function onClick(event) {
 		event.stopPropagation();
-
-		dispatch('click', event);
+		const host = $host;
+		host.dispatchEvent(new Event('click', event));
 	}
 </script>
 
 {#if clickable}
-	<button on:click={onClick}>
+	<button onclick={onClick}>
 		<svg
-			class={$$props.class}
+			class={className}
 			{focusable}
 			width={size}
 			height={size}
 			viewBox={`0 0 ${viewbox.width} ${viewbox.height}`}
-			on:keypress={e => {
-				//TODO: need to design how this will work A11y
+			onkeypress={e => {
+				// TODO: need to design how this will work for A11y
 			}}
 			role="button"
 			tabindex="0"
@@ -45,7 +43,7 @@
 {:else}
 	<span>
 		<svg
-			class={$$props.class}
+			class={className}
 			{focusable}
 			width={size}
 			height={size}

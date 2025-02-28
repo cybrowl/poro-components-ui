@@ -11,7 +11,7 @@
 
 <button
 	class={`sign_in_button
-    ${variant === 'highlighted' ? 'bg-gray-a' : ''}
+    ${variant === 'highlighted' ? 'bg-button-secondary' : ''}
     ${variant === 'none' ? '' : ''}
   `}
 >
