@@ -1,7 +1,5 @@
 <script>
-	export let label = 'Button';
-	export let variant = 'dark';
-	export let width = 'w-auto'; 
+	const {label = 'Button', variant = 'dark', width = 'w-auto'} = $props();
 </script>
 
 <button class={`base-button ${variant === 'dark' ? 'dark' : 'gold'} ${width}`}>
@@ -21,4 +19,3 @@
 		@apply bg-merigold text-black;
 	}
 </style>
-

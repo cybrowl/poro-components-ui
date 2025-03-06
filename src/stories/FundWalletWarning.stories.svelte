@@ -3,7 +3,7 @@
 	import FundWalletWarning from '../lib/components/wallet/FundWalletWarning.svelte';
 
 	const {Story} = defineMeta({
-		title: 'Wallet / Warning',
+		title: 'Components/ Wallet / Warning',
 		component: FundWalletWarning
 	});
 </script>
