@@ -1,7 +1,7 @@
 <script>
 	import * as icons from './icons';
 
-	const {
+	let {
 		name,
 		clickable = true,
 		focusable = false,
@@ -11,10 +11,10 @@
 		class: className = ''
 	} = $props();
 
-	const viewbox = {
+	let viewbox = $derived({
 		width: viewSize.width / scale,
 		height: viewSize.height / scale
-	};
+	});
 
 	function onClick(event) {
 		event.stopPropagation();
@@ -23,34 +23,24 @@
 	}
 </script>
 
+{#snippet IconSvg()}
+	<svg
+		class={className}
+		width={size}
+		height={size}
+		viewBox={`0 0 ${viewbox.width} ${viewbox.height}`}
+	>
+		{@html icons[name]}
+	</svg>
+{/snippet}
+
 {#if clickable}
 	<button onclick={onClick}>
-		<svg
-			class={className}
-			{focusable}
-			width={size}
-			height={size}
-			viewBox={`0 0 ${viewbox.width} ${viewbox.height}`}
-			onkeypress={e => {
-				// TODO: need to design how this will work for A11y
-			}}
-			role="button"
-			tabindex="0"
-		>
-			{@html icons[name]}
-		</svg>
+		{@render IconSvg()}
 	</button>
 {:else}
 	<span>
-		<svg
-			class={className}
-			{focusable}
-			width={size}
-			height={size}
-			viewBox={`0 0 ${viewbox.width} ${viewbox.height}`}
-		>
-			{@html icons[name]}
-		</svg>
+		{@render IconSvg()}
 	</span>
 {/if}
 
