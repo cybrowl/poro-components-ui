@@ -15,12 +15,22 @@
 {/snippet}
 
 <div class="wallet-funds-warning">
+	<div class="absolute top-0 left-0 m-8">
+		<Icon
+			name="poro_brand_white"
+			class="cursor-pointer"
+			size="2.5rem"
+			scale="1"
+			viewSize={{width: 32, height: 32}}
+		/>
+	</div>
+
 	<Icon
-		name="piggy_bank_placeholder"
+		name="piggy_bank"
 		class="cursor-pointer"
-		size="4rem"
+		size="7rem"
 		scale="1"
-		viewSize={{width: 64, height: 64}}
+		viewSize={{width: 112, height: 112}}
 	/>
 	{@render WarningMessage()}
 	{@render ActionButtons()}
@@ -34,7 +44,8 @@
       w-[672px] h-[400px] p-6
       text-center
       rounded-xl
-      border border-white border-opacity-25;
+      border border-white border-opacity-25
+      relative;
 	}
 
 	.message {
@@ -42,6 +53,6 @@
 	}
 
 	.actions {
-		@apply flex gap-4 mt-6;
+		@apply flex gap-4 mt-6 absolute bottom-0 right-0 m-8;
 	}
 </style>
