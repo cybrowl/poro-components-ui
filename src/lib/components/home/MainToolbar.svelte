@@ -3,57 +3,53 @@
 
 	export let selected_icon = 'gpt';
 
+	const icons = [
+		{name: 'gpt', size: '2rem', viewSize: {width: 24, height: 24}},
+		{
+			name: 'line',
+			size: '2rem',
+			viewSize: {width: 24, height: 24},
+			clickable: false,
+			class: 'fill_white'
+		},
+		{name: 'history', size: '2rem', viewSize: {width: 24, height: 24}},
+		{name: 'wallet', size: '2rem', viewSize: {width: 24, height: 24}},
+		{name: 'settings', size: '2rem', viewSize: {width: 24, height: 24}},
+		{
+			name: 'new_session_white',
+			size: '2.5rem',
+			viewSize: {width: 32, height: 32},
+			class: 'fill_none ml-6',
+			clickable: true
+		}
+	];
+
 	function select_icon(icon_name) {
 		selected_icon = icon_name;
+	}
+
+	function getIconClass(icon) {
+		return (
+			icon.class || (selected_icon === icon.name ? 'fill_gold' : 'fill_white')
+		);
 	}
 </script>
 
 <div class="main">
-	<Icon
-		name="gpt"
-		class={selected_icon === 'gpt' ? 'fill_gold' : 'fill_white'}
-		viewSize={{width: 44, height: 44}}
-		size="3rem"
-		on:click={() => select_icon('gpt')}
-	/>
-	<Icon
-		name="line"
-		class="fill_white"
-		clickable={false}
-		size="2rem"
-		viewSize={{width: 1, height: 24}}
-	/>
-	<Icon
-		name="wallet"
-		class={selected_icon === 'wallet' ? 'fill_gold' : 'fill_white'}
-		viewSize={{width: 44, height: 44}}
-		size="3rem"
-		on:click={() => select_icon('wallet')}
-	/>
-	<Icon
-		name="history"
-		class={selected_icon === 'history' ? 'fill_gold' : 'fill_white'}
-		viewSize={{width: 44, height: 44}}
-		size="3rem"
-		on:click={() => select_icon('history')}
-	/>
-	<Icon
-		name="settings"
-		class={selected_icon === 'settings' ? 'fill_gold' : 'fill_white'}
-		viewSize={{width: 44, height: 44}}
-		size="3rem"
-		on:click={() => select_icon('settings')}
-	/>
-	<Icon
-		name="new_session_white"
-		class="fill_none ml-6"
-		viewSize={{width: 32, height: 32}}
-		size="2.5rem"
-	/>
+	{#each icons as icon}
+		<Icon
+			name={icon.name}
+			class={getIconClass(icon)}
+			viewSize={icon.viewSize}
+			size={icon.size}
+			clickable={icon.clickable !== false}
+			on:click={() => icon.clickable !== false && select_icon(icon.name)}
+		/>
+	{/each}
 </div>
 
 <style lang="postcss">
 	.main {
-		@apply flex flex-row gap-2 items-center;
+		@apply flex flex-row gap-6 items-center;
 	}
 </style>
