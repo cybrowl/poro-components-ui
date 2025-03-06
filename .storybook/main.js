@@ -1,6 +1,7 @@
 const config = {
 	stories: [
 		'../src/stories/*.stories.@(js|ts|svelte)',
+		'../src/stories/components/*.stories.@(js|ts|svelte)',
 		'../src/stories/pages/*.stories.@(js|ts|svelte)'
 	],
 
