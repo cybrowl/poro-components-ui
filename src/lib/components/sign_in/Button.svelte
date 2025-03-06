@@ -1,23 +1,23 @@
 <script>
 	import Icon from '../basic_elements/Icon.svelte';
 
-	export let label = 'Continue with Google';
-	export let logo_name = 'google_logo';
-	export let logo_view_size = {width: 32, height: 32};
-	export let logo_size = '2rem';
+	let {
+		label = 'Continue with Google',
+		logo_name = 'google_logo',
+		logo_view_size = {width: 32, height: 32},
+		logo_size = '2rem',
+		variant = 'none'
+	} = $props();
 
-	export let variant = 'none';
+	let buttonClasses = $derived(
+		`sign_in_button ${variant === 'highlighted' ? 'bg-graphite' : ''}`
+	);
 </script>
 
-<button
-	class={`sign_in_button
-    ${variant === 'highlighted' ? 'bg-button-secondary' : ''}
-    ${variant === 'none' ? '' : ''}
-  `}
->
+<button class={buttonClasses}>
 	<Icon
 		name={logo_name}
-		class="cursor_pointer"
+		class="cursor-pointer"
 		size={logo_size}
 		scale="1"
 		viewSize={logo_view_size}
@@ -27,7 +27,7 @@
 
 <style lang="postcss">
 	.sign_in_button {
-		@apply font-sans flex items-center w-80 gap-6 p-4  text-xl text-white border-solid rounded-xl border border-white;
+		@apply font-sans flex items-center w-80 gap-6 p-4 text-xl text-white border-solid rounded-xl border border-white;
 		border-color: rgba(255, 255, 255, 0.25);
 	}
 </style>
