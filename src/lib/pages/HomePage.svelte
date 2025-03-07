@@ -43,7 +43,7 @@
 		<div class="submit-icon">
 			<Icon
 				name="submit"
-				class="cursor_default"
+				class="cursor_pointer"
 				size="3.5rem"
 				scale="1"
 				viewSize={{
