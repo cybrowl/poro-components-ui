@@ -6,7 +6,8 @@
 		width = 'w-auto',
 		height = 'h-14',
 		onclick = () => {},
-		class: customClass = ''
+		class: customClass = '',
+		children
 	} = $props();
 
 	let buttonClasses = $derived(
@@ -15,8 +16,7 @@
 </script>
 
 <button class={buttonClasses} {onclick}>
-	<slot>{label}</slot>
-	<!-- Use slot to render children or fallback to label -->
+	{@render children?.()}
 </button>
 
 <style lang="postcss">
