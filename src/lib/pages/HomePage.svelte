@@ -60,7 +60,7 @@
 					mode="split"
 					{carta}
 					disableToolbar={true}
-					placeholder="#"
+					placeholder="|"
 				/>
 			</div>
 		</div>
