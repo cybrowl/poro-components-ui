@@ -9,7 +9,8 @@ export default {
 			colors: {
 				'background-primary': '#0C0C0D',
 				'background-secondary': '#111113',
-				'graphite': '#313135',
+				graphite: '#313135',
+				'carbon-black': `#161618`,
 				merigold: '#DAA520'
 			},
 			screens: {
