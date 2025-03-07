@@ -13,10 +13,18 @@
 	let buttonClasses = $derived(
 		`base-button ${variant === 'dark' ? 'dark' : 'gold'} ${width} ${height} ${customClass}`.trim()
 	);
+
+	function render_label() {
+		return label;
+	}
 </script>
 
 <button class={buttonClasses} {onclick}>
-	{@render children?.()}
+	{#if children}
+		{@render children()}
+	{:else}
+		{render_label()}
+	{/if}
 </button>
 
 <style lang="postcss">

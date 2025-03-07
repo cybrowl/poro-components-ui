@@ -20,17 +20,20 @@
 
 {#snippet ActionButtons()}
 	<div class="actions">
-		<Button variant="dark" width="w-16" height="h-14" on:click={handleOkClick}
-			>Ok</Button
-		>
 		<Button
+			label="Ok"
+			variant="dark"
+			width="w-16"
+			height="h-14"
+			on:click={handleOkClick}
+		/>
+		<Button
+			label="Fund wallet"
 			variant="gold"
 			width="w-32"
 			height="h-14"
 			on:click={handleFundWalletClick}
-		>
-			Fund wallet
-		</Button>
+		/>
 	</div>
 {/snippet}
 
