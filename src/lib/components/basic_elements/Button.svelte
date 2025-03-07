@@ -1,18 +1,22 @@
 <script>
+	// Define props using $props()
 	let {
 		label = 'Button',
 		variant = 'dark',
 		width = 'w-auto',
-		height = 'h-14'
+		height = 'h-14',
+		onclick = () => {},
+		class: customClass = ''
 	} = $props();
 
 	let buttonClasses = $derived(
-		`base-button ${variant === 'dark' ? 'dark' : 'gold'} ${width} ${height}`
+		`base-button ${variant === 'dark' ? 'dark' : 'gold'} ${width} ${height} ${customClass}`.trim()
 	);
 </script>
 
-<button class={buttonClasses}>
-	{label}
+<button class={buttonClasses} {onclick}>
+	<slot>{label}</slot>
+	<!-- Use slot to render children or fallback to label -->
 </button>
 
 <style lang="postcss">

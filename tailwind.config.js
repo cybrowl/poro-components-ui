@@ -11,7 +11,8 @@ export default {
 				'background-secondary': '#111113',
 				graphite: '#313135',
 				'carbon-black': `#161618`,
-				merigold: '#DAA520'
+				merigold: '#DAA520',
+				'silver-mist': '#AAAAAF'
 			},
 			screens: {
 				'3xl': '2222px'
