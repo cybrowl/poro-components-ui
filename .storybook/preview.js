@@ -25,12 +25,12 @@ const preview = {
 			default: 'poro_dark',
 			values: [
 				{
-					name: 'poro_dark',
+					name: 'background-primary',
 					value: '#0A0A0B'
 				},
 				{
-					name: 'poro_grey',
-					value: '#1E1E1E'
+					name: 'background-secondary',
+					value: '#111113'
 				}
 			]
 		}
