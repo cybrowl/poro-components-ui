@@ -1,24 +1,29 @@
 <script>
-	import {createEventDispatcher, onMount} from 'svelte';
 	import Icon from '../components/basic_elements/Icon.svelte';
 	import MainToolBar from '../components/home/MainToolbar.svelte';
-
 	import {Carta, MarkdownEditor} from 'carta-md';
 
+	// Define props using $props()
+	let {has_chats = false} = $props();
+
+	// Initialize Carta with Dracula theme
 	const carta = new Carta({
 		theme: 'dracula'
 	});
 
-	const dispatch = createEventDispatcher();
+	// State for the Markdown editor value
+	let value = $state('');
 
-	let value = '';
-
-	export let has_chats = false;
+	// Optional: Add a callback for submit if needed
+	let onSubmit = () => {
+		console.log('Submit clicked with value:', value);
+		// Add your submit logic here
+	};
 </script>
 
 <div class="main-grid">
 	<div class="read-panel">
-		{#if has_chats === true}
+		{#if has_chats}
 			<Icon
 				name="poro_logo"
 				class="cursor_default"
@@ -34,6 +39,19 @@
 	<div class="write-panel">
 		<div class="toolbar">
 			<MainToolBar />
+		</div>
+		<div class="submit-icon">
+			<Icon
+				name="submit"
+				class="cursor_default"
+				size="3.5rem"
+				scale="1"
+				viewSize={{
+					width: 56,
+					height: 56
+				}}
+				onclick={onSubmit}
+			/>
 		</div>
 		<div class="editor-root">
 			<div class="markdown">
@@ -80,7 +98,7 @@
 	.write-panel {
 		@apply col-start-7 col-end-13
             row-start-1 row-end-auto
-            justify-between flex flex-col
+            flex flex-col
             bg-background-secondary
             w-full h-full;
 	}
@@ -89,6 +107,10 @@
 		@apply w-full h-16
             z-10 flex items-center
             justify-end p-10;
+	}
+
+	.submit-icon {
+		@apply flex justify-end px-10 py-4;
 	}
 
 	.editor-root {

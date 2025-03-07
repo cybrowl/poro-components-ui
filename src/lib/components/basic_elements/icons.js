@@ -76,9 +76,8 @@ export const gpt = `
 `;
 
 export const submit = `
-<rect width="56" height="56" rx="16" fill="#FFD12C"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M28 17.2688L34.9664 24.2336L33.8352 25.3664L28.8
-20.3312V38.4H27.2V20.3312L22.1664 25.3664L21.0336 24.2336L28 17.2688Z" fill="#111113"/>
+  <rect width="56" height="56" rx="16" fill="#FFD12C"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M28.0001 17.2688L34.9665 24.2336L33.8353 25.3664L28.8001 20.3312V38.4H27.2001V20.3312L22.1665 25.3664L21.0337 24.2336L28.0001 17.2688Z" fill="#22242B"/>
 `;
 
 export const line = `<line x1="12.25" y1="1.09279e-08" x2="12.25" y2="24" stroke="#AAAAAF" stroke-width="0.5"/>`;
