@@ -157,3 +157,7 @@ export const ckUSDC = `
   </clipPath>
   </defs>
   `;
+
+export const arrow_right = `
+  <path d="M4.35135 6L0 1.4L1.32432 0L7 6L1.32432 12L0 10.6L4.35135 6Z" fill="white"/>
+  `;
