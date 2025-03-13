@@ -1,29 +1,10 @@
 <script>
 	import Icon from '../basic_elements/Icon.svelte';
 
-	let {
-		amount = '20.50', // Default amount in dollars
-		currency = 'ckUSDC', // Default currency (e.g., ckUSDC)
-		onAddCash = () => {} // Callback for adding cash
-	} = $props();
+	let {amount = '20.50', currency = 'ckUSDC', onAddCash = () => {}} = $props();
 
-	// Derive the full currency label
 	let currencyLabel = $derived(`United States Dollar (${currency})`);
 </script>
-
-{#snippet CashDetails()}
-	<div class="cash-details">
-		<p class="prompt-label">Add Cash To</p>
-		<p class="currency-label">{currencyLabel}</p>
-	</div>
-{/snippet}
-
-{#snippet CashAmount()}
-	<div class="cash-amount">
-		<p class="amount-label">${amount}</p>
-		<p class="status-label">Available</p>
-	</div>
-{/snippet}
 
 <div class="cash-balance-container">
 	<div class="cash-icon">
@@ -35,15 +16,20 @@
 		/>
 	</div>
 
-	{@render CashDetails()}
+	<div class="cash-details">
+		<p class="prompt-label">Add Cash To</p>
+		<p class="currency-label">{currencyLabel}</p>
+	</div>
 
-	{@render CashAmount()}
+	<div class="cash-amount">
+		<p class="amount-label">${amount}</p>
+		<p class="status-label">Available</p>
+	</div>
 </div>
 
 <style lang="postcss">
 	.cash-balance-container {
-		@apply flex items-center;
-		@apply h-12 px-3;
+		@apply flex items-center justify-between w-full h-12;
 	}
 
 	.cash-icon {
@@ -51,7 +37,7 @@
 	}
 
 	.cash-details {
-		@apply flex-1 flex flex-col justify-center mr-3;
+		@apply flex flex-col justify-center flex-1;
 	}
 
 	.prompt-label {

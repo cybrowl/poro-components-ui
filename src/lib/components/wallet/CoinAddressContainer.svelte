@@ -78,7 +78,7 @@
 	}
 
 	.label {
-		@apply text-lg opacity-80;
+		@apply text-lg text-white;
 	}
 
 	.address-text {

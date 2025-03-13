@@ -30,7 +30,7 @@
 	}
 
 	.toggle-button {
-		@apply font-sans font-bold text-lg px-10 py-2 rounded-full transition-all duration-300 ease-in-out focus:outline-none;
+		@apply font-sans font-bold text-2xl px-10 py-3 rounded-full transition-all duration-300 ease-in-out focus:outline-none;
 		@apply bg-transparent text-white cursor-pointer;
 		@apply relative z-10;
 	}

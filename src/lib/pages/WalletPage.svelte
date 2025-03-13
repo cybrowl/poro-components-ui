@@ -1,5 +1,6 @@
 <script>
 	import Banner from '../components/wallet/Banner.svelte';
+	import CashBalanceContainer from '../components/wallet/CashBalanceContainer.svelte';
 	import CoinAddressContainer from '../components/wallet/CoinAddressContainer.svelte';
 	import Icon from '../components/basic_elements/Icon.svelte';
 	import MainToolBar from '../components/home/MainToolbar.svelte';
@@ -34,7 +35,18 @@
 		</div>
 		<div class="settings-content">
 			<ToggleSwitch />
-			<Banner />
+			<div class="mb-10">
+				<Banner />
+			</div>
+
+			<CashBalanceContainer />
+			<Icon
+				name="line_down"
+				class="cursor-default ml-4"
+				size="1rem"
+				scale="1"
+				viewSize={{width: 1, height: 12}}
+			/>
 			<CoinAddressContainer
 				coinType="ICP"
 				address="87a4427b0ae47c3a92f0f2132a98f9a5d69d5ecefa97ad9ac3919766bbae85ac"
