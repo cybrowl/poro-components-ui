@@ -25,6 +25,6 @@
 	}
 
 	.banner-text {
-		@apply text-white text-base font-sans ml-2 mr-4;
+		@apply text-white text-base font-sans mx-6;
 	}
 </style>
