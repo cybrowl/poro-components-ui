@@ -65,7 +65,7 @@
 	}
 
 	.settings-content {
-		@apply flex flex-col items-start w-full gap-4 pt-4 pl-4;
+		@apply flex flex-col items-start w-full gap-6 p-6;
 	}
 
 	.mobile-incompatible-notice {

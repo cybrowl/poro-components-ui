@@ -16,13 +16,12 @@
 
 	let copied = $state(false);
 
-	// Handle copy to clipboard
 	async function handleCopy() {
 		try {
 			await navigator.clipboard.writeText(address);
-			copied = true; // Update state
-			setTimeout(() => (copied = false), 2000); // Reset after 2 seconds
-			onCopy(); // Call the callback
+			copied = true;
+			setTimeout(() => (copied = false), 2000);
+			onCopy();
 		} catch (error) {
 			console.error('Copy failed:', error);
 		}
@@ -52,7 +51,7 @@
 		class="copy-button"
 		label="Ok"
 		variant="dark"
-		width="w-20"
+		--width="w-20"
 		height="h-14"
 		onclick={handleCopy}
 	>
@@ -66,7 +65,8 @@
 
 <style lang="postcss">
 	.coin-address-container {
-		@apply flex;
+		@apply flex justify-between items-center w-full;
+		@apply h-14;
 	}
 
 	.coin-icon {
@@ -74,7 +74,7 @@
 	}
 
 	.address-info {
-		@apply flex flex-col items-start text-white;
+		@apply flex flex-col items-start text-white flex-grow;
 	}
 
 	.label {
