@@ -4,20 +4,20 @@
 	export let selected_icon = 'gpt';
 
 	const icons = [
-		{name: 'gpt', size: '2rem', viewSize: {width: 24, height: 24}},
+		{name: 'gpt', size: '1.5rem', viewSize: {width: 24, height: 24}},
 		{
 			name: 'line',
-			size: '2rem',
+			size: '1.5rem',
 			viewSize: {width: 24, height: 24},
 			clickable: false,
 			class: 'fill_white'
 		},
-		{name: 'history', size: '2rem', viewSize: {width: 24, height: 24}},
-		{name: 'wallet', size: '2rem', viewSize: {width: 24, height: 24}},
-		{name: 'settings', size: '2rem', viewSize: {width: 24, height: 24}},
+		{name: 'history', size: '1.5rem', viewSize: {width: 24, height: 24}},
+		{name: 'wallet', size: '1.5rem', viewSize: {width: 24, height: 24}},
+		{name: 'settings', size: '1.5rem', viewSize: {width: 24, height: 24}},
 		{
 			name: 'new_session_white',
-			size: '2.5rem',
+			size: '2rem',
 			viewSize: {width: 32, height: 32},
 			class: 'fill_none ml-6',
 			clickable: true
