@@ -1,5 +1,8 @@
 <script>
 	import * as icons from './icons';
+	import {createEventDispatcher} from 'svelte';
+
+	const dispatch = createEventDispatcher();
 
 	let {
 		name,
@@ -17,9 +20,10 @@
 	});
 
 	function onClick(event) {
-		event.stopPropagation();
-		const host = $host;
-		host.dispatchEvent(new Event('click', event));
+		if (clickable) {
+			event.stopPropagation();
+			dispatch('icon-click', {name});
+		}
 	}
 </script>
 
@@ -56,6 +60,12 @@
 	}
 	.fill_none {
 		@apply fill-none;
+	}
+	.stroke_white {
+		@apply stroke-white;
+	}
+	.stroke_gold {
+		@apply stroke-merigold;
 	}
 	.fill_white {
 		@apply fill-white;

@@ -1,49 +1,73 @@
 <script>
 	import Icon from '../basic_elements/Icon.svelte';
 
-	export let selected_icon = 'gpt';
+	let {selected_icon = 'gpt'} = $props();
+	let selectedIcon = $state(selected_icon); // Make selected_icon reactive
 
 	const icons = [
-		{name: 'gpt', size: '1.5rem', viewSize: {width: 24, height: 24}},
 		{
-			name: 'line',
+			selectedName: 'gpt_gold',
+			unselectedName: 'gpt_white',
+			size: '1.5rem',
+			viewSize: {width: 24, height: 24},
+			class: 'fill_none'
+		},
+		{
+			selectedName: 'line', // No gold version since it's not clickable
+			unselectedName: 'line',
 			size: '1.5rem',
 			viewSize: {width: 24, height: 24},
 			clickable: false,
 			class: 'fill_white'
 		},
-		{name: 'history', size: '1.5rem', viewSize: {width: 24, height: 24}},
-		{name: 'wallet', size: '1.5rem', viewSize: {width: 24, height: 24}},
-		{name: 'settings', size: '1.5rem', viewSize: {width: 24, height: 24}},
 		{
-			name: 'new_session_white',
+			selectedName: 'history_gold',
+			unselectedName: 'history_white',
+			size: '1.5rem',
+			viewSize: {width: 24, height: 24}
+		},
+		{
+			selectedName: 'wallet_gold',
+			unselectedName: 'wallet_white',
+			size: '1.5rem',
+			viewSize: {width: 24, height: 24}
+		},
+		{
+			selectedName: 'settings_gold',
+			unselectedName: 'settings_white',
+			size: '1.5rem',
+			viewSize: {width: 24, height: 24}
+		},
+		{
+			selectedName: 'new_session_white', // No gold version needed
+			unselectedName: 'new_session_white',
 			size: '2rem',
 			viewSize: {width: 32, height: 32},
-			class: 'fill_none ml-6',
-			clickable: true
+			class: 'fill_none ml-6'
 		}
 	];
 
 	function select_icon(icon_name) {
-		selected_icon = icon_name;
+		selectedIcon = icon_name; // Update the reactive state
 	}
 
-	function getIconClass(icon) {
-		return (
-			icon.class || (selected_icon === icon.name ? 'fill_gold' : 'fill_white')
-		);
+	function getIconName(icon) {
+		return selectedIcon === icon.selectedName
+			? icon.selectedName
+			: icon.unselectedName;
 	}
 </script>
 
 <div class="main">
 	{#each icons as icon}
 		<Icon
-			name={icon.name}
-			class={getIconClass(icon)}
+			name={getIconName(icon)}
+			class={icon.class || ''}
 			viewSize={icon.viewSize}
 			size={icon.size}
 			clickable={icon.clickable !== false}
-			on:click={() => icon.clickable !== false && select_icon(icon.name)}
+			on:icon-click={() =>
+				icon.clickable !== false && select_icon(icon.selectedName)}
 		/>
 	{/each}
 </div>
