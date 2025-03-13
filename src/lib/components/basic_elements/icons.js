@@ -161,3 +161,7 @@ export const ckUSDC = `
 export const arrow_right = `
   <path d="M4.35135 6L0 1.4L1.32432 0L7 6L1.32432 12L0 10.6L4.35135 6Z" fill="white"/>
   `;
+
+export const line_down = `
+  <line x1="0.5" y1="2.18557e-08" x2="0.499999" y2="20" stroke="white"/>
+  `;

@@ -66,8 +66,7 @@
 
 <style lang="postcss">
 	.coin-address-container {
-		@apply flex items-center;
-		@apply h-14 px-4;
+		@apply flex;
 	}
 
 	.coin-icon {
@@ -75,7 +74,7 @@
 	}
 
 	.address-info {
-		@apply flex flex-col items-start text-white flex-grow;
+		@apply flex flex-col items-start text-white;
 	}
 
 	.label {
@@ -83,6 +82,6 @@
 	}
 
 	.address-text {
-		@apply font-mono text-sm truncate text-silver-mist;
+		@apply font-mono text-sm truncate text-silver-mist pr-4;
 	}
 </style>
