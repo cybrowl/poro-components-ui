@@ -31,7 +31,7 @@
 {#snippet AddressInfo()}
 	<div class="address-info">
 		<p class="label">{coinType} Address</p>
-		<p class="address-text">{address}</p>
+		<p class="address-text" title={address}>{address}</p>
 	</div>
 {/snippet}
 
@@ -65,16 +65,15 @@
 
 <style lang="postcss">
 	.coin-address-container {
-		@apply flex justify-between items-center w-full;
-		@apply h-14;
+		@apply flex items-center w-full h-14 gap-4;
 	}
 
 	.coin-icon {
-		@apply mr-4 flex items-center;
+		@apply flex-shrink-0; /* Prevent icon from shrinking */
 	}
 
 	.address-info {
-		@apply flex flex-col items-start text-white flex-grow;
+		@apply flex flex-col justify-center min-w-0 flex-grow; /* min-w-0 allows truncation */
 	}
 
 	.label {
@@ -82,6 +81,7 @@
 	}
 
 	.address-text {
-		@apply font-mono text-sm truncate text-silver-mist pr-4;
+		@apply font-mono text-sm text-silver-mist truncate;
+		@apply hover:overflow-visible hover:whitespace-normal;
 	}
 </style>

@@ -61,13 +61,9 @@
 	</div>
 </div>
 
-<div class="mobile-incompatible-notice">
-	<h1>Sorry, Mobile Not Supported</h1>
-</div>
-
 <style lang="postcss">
 	.ai-interface {
-		@apply hidden lg:grid grid-cols-12 h-screen fixed inset-0;
+		@apply lg:grid md:grid grid-cols-12 h-screen fixed inset-0;
 	}
 
 	.interface-panel {
@@ -88,10 +84,6 @@
 
 	.transaction-button-container {
 		@apply w-full flex justify-end px-10 pt-8;
-	}
-
-	.mobile-incompatible-notice {
-		@apply grid lg:hidden h-screen place-items-center text-white text-4xl;
 	}
 
 	.toolbar {
