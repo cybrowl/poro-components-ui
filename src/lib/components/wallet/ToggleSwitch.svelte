@@ -1,24 +1,21 @@
 <script>
-	let {active = 'deposit', onToggle = newState => {}} = $props();
+	let {checked = true} = $props();
 
 	function handleToggle(newState) {
-		if (active !== newState) {
-			active = newState;
-			onToggle(newState);
-		}
+		checked = newState;
 	}
 </script>
 
 <div class="toggle-switch">
 	<button
-		class="toggle-button {active === 'deposit' ? 'active' : ''}"
-		onclick={() => handleToggle('deposit')}
+		class="toggle-button {checked ? 'active' : ''}"
+		onclick={() => handleToggle(true)}
 	>
 		Deposit
 	</button>
 	<button
-		class="toggle-button {active === 'cashout' ? 'active' : ''}"
-		onclick={() => handleToggle('cashout')}
+		class="toggle-button {!checked ? 'active' : ''}"
+		onclick={() => handleToggle(false)}
 	>
 		Cash Out
 	</button>
@@ -48,12 +45,10 @@
 		@apply rounded-r-full;
 	}
 
-	/* Ensure only one button is active at a time */
 	.toggle-button:not(.active) {
 		@apply bg-white text-carbon-black z-10;
 	}
 
-	/* Hover effect */
 	.toggle-button:hover:not(.active) {
 		@apply bg-graphite bg-opacity-50 text-white;
 	}

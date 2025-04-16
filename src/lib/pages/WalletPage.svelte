@@ -8,7 +8,7 @@
 	import TransactionHistoryButton from '../components/wallet/TransactionHistoryButton.svelte';
 
 	// State for toggle switch (Deposit/Cash out)
-	let isDeposit = $state(true);
+	let {isDeposit = true} = $props();
 
 	// Handlers for coin address copy
 	function handleCopy(coinType) {
@@ -34,29 +34,32 @@
 			<TransactionHistoryButton />
 		</div>
 		<div class="settings-content">
-			<ToggleSwitch />
-			<div class="mb-10">
-				<Banner />
-			</div>
+			<ToggleSwitch bind:checked={isDeposit} />
 
-			<CashBalanceContainer />
-			<Icon
-				name="line_down"
-				class="cursor-default ml-4"
-				size="1rem"
-				scale="1"
-				viewSize={{width: 1, height: 12}}
-			/>
-			<CoinAddressContainer
-				coinType="ICP"
-				address="87a4427b0ae47c3a92f0f2132a98f9a5d69d5ecefa97ad9ac3919766bbae85ac"
-				onCopy={() => handleCopy('ICP')}
-			/>
-			<CoinAddressContainer
+			{#if isDeposit}
+				<div class="mb-10">
+					<Banner />
+				</div>
+
+				<CashBalanceContainer />
+				<Icon
+					name="line_down"
+					class="cursor-default ml-4"
+					size="1rem"
+					scale="1"
+					viewSize={{width: 1, height: 12}}
+				/>
+				<CoinAddressContainer
+					coinType="ICP"
+					address="87a4427b0ae47c3a92f0f2132a98f9a5d69d5ecefa97ad9ac3919766bbae85ac"
+					onCopy={() => handleCopy('ICP')}
+				/>
+				<!-- <CoinAddressContainer
 				coinType="BTC"
 				address="bgjdh38740ok382fk0973bf749dbdsb9475bsjv"
 				onCopy={() => handleCopy('BTC')}
-			/>
+			/> -->
+			{/if}
 		</div>
 	</div>
 </div>

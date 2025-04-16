@@ -1,6 +1,5 @@
 <script>
-	let {message = 'ICP and BTC will automatically be converted to ckUSDC'} =
-		$props();
+	let {message = 'ICP will automatically be converted to ckUSDC'} = $props();
 </script>
 
 <div class="banner-wrapper">
