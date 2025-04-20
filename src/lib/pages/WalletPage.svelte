@@ -1,5 +1,6 @@
 <script>
 	import Banner from '../components/wallet/Banner.svelte';
+	import CashOutAmount from '../components/wallet/CashOutAmount.svelte';
 	import CashBalanceContainer from '../components/wallet/CashBalanceContainer.svelte';
 	import CoinAddressContainer from '../components/wallet/CoinAddressContainer.svelte';
 	import Icon from '../components/basic_elements/Icon.svelte';
@@ -41,7 +42,11 @@
 					<Banner />
 				</div>
 
-				<CashBalanceContainer />
+				<CashBalanceContainer
+					promptLabel="Add Cash To"
+					amount={20}
+					onAddCash={() => handleAddCash()}
+				/>
 				<Icon
 					name="line_down"
 					class="cursor-default ml-4"
@@ -59,6 +64,25 @@
 				address="bgjdh38740ok382fk0973bf749dbdsb9475bsjv"
 				onCopy={() => handleCopy('BTC')}
 			/> -->
+			{:else}
+				<div class="mb-10">
+					<Banner />
+				</div>
+
+				<CashOutAmount coinType="ckUSDC" amount={500} />
+				<Icon
+					name="line_down"
+					class="cursor-default ml-4"
+					size="1rem"
+					scale="1"
+					viewSize={{width: 1, height: 12}}
+				/>
+
+				<CashBalanceContainer
+					promptLabel="Cash Out From"
+					amount={1000}
+					onAddCash={() => handleAddCash()}
+				/>
 			{/if}
 		</div>
 	</div>

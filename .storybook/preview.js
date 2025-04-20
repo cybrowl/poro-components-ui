@@ -22,7 +22,7 @@ const preview = {
 			}
 		},
 		backgrounds: {
-			default: 'poro_dark',
+			default: 'background-primary',
 			values: [
 				{
 					name: 'background-primary',

@@ -10,7 +10,8 @@ export default {
 				'background-primary': '#0C0C0D',
 				'background-secondary': '#111113',
 				graphite: '#313135',
-				'carbon-black': `#161618`,
+				'carbon-black': '#161618',
+				'midnight-slate': '#44444B',
 				merigold: '#DAA520',
 				'silver-mist': '#AAAAAF'
 			},

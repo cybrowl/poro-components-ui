@@ -1,7 +1,12 @@
 <script>
 	import Icon from '../basic_elements/Icon.svelte';
 
-	let {amount = '20.50', currency = 'ckUSDC', onAddCash = () => {}} = $props();
+	let {
+		amount = '0',
+		currency = 'ckUSDC',
+		promptLabel = 'Add Cash To',
+		onAddCash = () => {}
+	} = $props();
 
 	let currencyLabel = $derived(`United States Dollar (${currency})`);
 </script>
@@ -17,7 +22,7 @@
 	</div>
 
 	<div class="cash-details">
-		<p class="prompt-label">Add Cash To</p>
+		<p class="prompt-label">{promptLabel}</p>
 		<p class="currency-label">{currencyLabel}</p>
 	</div>
 
