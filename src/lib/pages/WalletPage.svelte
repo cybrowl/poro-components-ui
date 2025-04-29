@@ -1,5 +1,7 @@
 <script>
 	import Banner from '../components/wallet/Banner.svelte';
+	import Button from '../components/basic_elements/Button.svelte';
+
 	import CashOutAmount from '../components/wallet/CashOutAmount.svelte';
 	import CashBalanceContainer from '../components/wallet/CashBalanceContainer.svelte';
 	import CoinAddressContainer from '../components/wallet/CoinAddressContainer.svelte';
@@ -38,6 +40,7 @@
 		<div class="settings-content">
 			<ToggleSwitch bind:checked={isDeposit} />
 
+			<!-- Deposit -->
 			{#if isDeposit}
 				<div class="mb-10">
 					<Banner />
@@ -60,15 +63,9 @@
 					address="87a4427b0ae47c3a92f0f2132a98f9a5d69d5ecefa97ad9ac3919766bbae85ac"
 					onCopy={() => handleCopy('ICP')}
 				/>
-				<!-- <CoinAddressContainer
-				coinType="BTC"
-				address="bgjdh38740ok382fk0973bf749dbdsb9475bsjv"
-				onCopy={() => handleCopy('BTC')}
-			/> -->
 			{:else}
-				<div class="mb-10">
-					<Banner />
-				</div>
+				<!-- Cash Out -->
+				<span class="mt-12"></span>
 
 				<CashOutAmount coinType="ckUSDC" amount={500} />
 
@@ -87,6 +84,12 @@
 				/>
 
 				<AddressToInput />
+
+				<Button
+					class="self-end ml-auto"
+					label="Cash Out"
+					onClick={() => handleDeposit()}
+				/>
 			{/if}
 		</div>
 	</div>
@@ -110,7 +113,7 @@
 	}
 
 	.settings-content {
-		@apply flex flex-col items-start w-full gap-6 p-6;
+		@apply flex flex-col items-start w-full gap-8 p-6;
 	}
 
 	.transaction-button-container {
