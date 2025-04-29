@@ -64,6 +64,9 @@
 	.stroke_white {
 		@apply stroke-white;
 	}
+	.stroke_gray {
+		@apply stroke-silver-mist;
+	}
 	.stroke_gold {
 		@apply stroke-merigold;
 	}

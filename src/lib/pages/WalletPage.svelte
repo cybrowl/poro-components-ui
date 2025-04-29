@@ -7,6 +7,7 @@
 	import MainToolBar from '../components/home/MainToolbar.svelte';
 	import ToggleSwitch from '../components/wallet/ToggleSwitch.svelte';
 	import TransactionHistoryButton from '../components/wallet/TransactionHistoryButton.svelte';
+	import AddressToInput from '../components/wallet/AddressToInput.svelte';
 
 	// State for toggle switch (Deposit/Cash out)
 	let {isDeposit = true} = $props();
@@ -70,6 +71,13 @@
 				</div>
 
 				<CashOutAmount coinType="ckUSDC" amount={500} />
+
+				<CashBalanceContainer
+					promptLabel="Cash Out From"
+					amount={1000}
+					onAddCash={() => handleAddCash()}
+				/>
+
 				<Icon
 					name="line_down"
 					class="cursor-default ml-4"
@@ -78,11 +86,7 @@
 					viewSize={{width: 1, height: 12}}
 				/>
 
-				<CashBalanceContainer
-					promptLabel="Cash Out From"
-					amount={1000}
-					onAddCash={() => handleAddCash()}
-				/>
+				<AddressToInput />
 			{/if}
 		</div>
 	</div>
