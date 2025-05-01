@@ -3,7 +3,7 @@
 	import WalletPage from '../../lib/pages/WalletPage.svelte';
 
 	const {Meta, Story} = defineMeta({
-		title: 'Pages / Wallet',
+		title: 'Page / Wallet',
 		component: WalletPage
 		// any “argTypes” or docs parameters go here
 	});
