@@ -13,7 +13,8 @@ export default {
 				'carbon-black': '#161618',
 				'midnight-slate': '#44444B',
 				merigold: '#DAA520',
-				'silver-mist': '#AAAAAF'
+				'silver-mist': '#AAAAAF',
+				'misty-green': '#86F977'
 			},
 			screens: {
 				'3xl': '2222px'

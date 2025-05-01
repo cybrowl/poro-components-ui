@@ -1,18 +1,36 @@
 <script>
+	import AddressToInput from '../components/wallet/AddressToInput.svelte';
 	import Banner from '../components/wallet/Banner.svelte';
 	import Button from '../components/basic_elements/Button.svelte';
-
-	import CashOutAmount from '../components/wallet/CashOutAmount.svelte';
 	import CashBalanceContainer from '../components/wallet/CashBalanceContainer.svelte';
+	import CashOutAmount from '../components/wallet/CashOutAmount.svelte';
 	import CoinAddressContainer from '../components/wallet/CoinAddressContainer.svelte';
 	import Icon from '../components/basic_elements/Icon.svelte';
 	import MainToolBar from '../components/home/MainToolbar.svelte';
 	import ToggleSwitch from '../components/wallet/ToggleSwitch.svelte';
+	import Transaction from '../components/wallet/Transaction.svelte';
 	import TransactionHistoryButton from '../components/wallet/TransactionHistoryButton.svelte';
-	import AddressToInput from '../components/wallet/AddressToInput.svelte';
 
-	// State for toggle switch (Deposit/Cash out)
-	let {isDeposit = true} = $props();
+	let {
+		isDeposit = false,
+		isCashOut = false,
+		isTransactionHistory = false
+	} = $props();
+
+	let transactions = [
+		{
+			status: 'Deposited',
+			description: 'Converted to Dollar (ckUSDC)',
+			date: 'June 12, 2024',
+			fiatAmount: '$100.00',
+			cryptoAmount: '500 ICP'
+		},
+		{
+			status: 'Cash Out',
+			date: 'June 12, 2024',
+			cashOutAmount: '-$500.00'
+		}
+	];
 
 	// Handlers for coin address copy
 	function handleCopy(coinType) {
@@ -34,14 +52,18 @@
 		<div class="toolbar">
 			<MainToolBar />
 		</div>
-		<div class="transaction-button-container">
-			<TransactionHistoryButton />
-		</div>
-		<div class="settings-content">
-			<ToggleSwitch bind:checked={isDeposit} />
 
+		{#if !isTransactionHistory}
+			<div class="transaction-button-container">
+				<TransactionHistoryButton />
+			</div>
+		{/if}
+
+		<div class="settings-content">
 			<!-- Deposit -->
 			{#if isDeposit}
+				<ToggleSwitch bind:checked={isDeposit} />
+
 				<div class="mb-10">
 					<Banner />
 				</div>
@@ -63,8 +85,12 @@
 					address="87a4427b0ae47c3a92f0f2132a98f9a5d69d5ecefa97ad9ac3919766bbae85ac"
 					onCopy={() => handleCopy('ICP')}
 				/>
-			{:else}
-				<!-- Cash Out -->
+			{/if}
+
+			<!-- Cash Out -->
+			{#if isCashOut}
+				<ToggleSwitch bind:checked={isDeposit} />
+
 				<span class="mt-12"></span>
 
 				<CashOutAmount coinType="ckUSDC" amount={500} />
@@ -90,6 +116,35 @@
 					label="Cash Out"
 					onClick={() => handleDeposit()}
 				/>
+			{/if}
+
+			<!-- Transaction History -->
+			{#if isTransactionHistory}
+				<Icon
+					name="arrow_left"
+					class="cursor-pointer"
+					size="2rem"
+					scale="1"
+					viewSize={{width: 24, height: 24}}
+				/>
+
+				<Icon
+					name="icp_transactions"
+					class="cursor-pointer"
+					size="6rem"
+					scale="1"
+					viewSize={{width: 88, height: 56}}
+				/>
+
+				<h2 class="text-2xl text-white font-bold">Internet Computer</h2>
+
+				<span class="mt-4"></span>
+
+				<div class="transactions">
+					{#each transactions as t}
+						<Transaction {...t} />
+					{/each}
+				</div>
 			{/if}
 		</div>
 	</div>
@@ -118,6 +173,10 @@
 
 	.transaction-button-container {
 		@apply w-full flex justify-end px-10 pt-8;
+	}
+
+	.transactions {
+		@apply flex flex-col gap-12 w-full;
 	}
 
 	.toolbar {
